@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QAZ PLOV</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="header">
+
+    <img
+        class="logo"
+        src="images/logo.png"
+        alt="QAZ PLOV"
+    >
+
+    <p class="subtitle">
+        Восточная кухня
+    </p>
+
+</header>
+
+<nav class="categories">
+
+    <button class="active" type="button" data-target="plov">
+        Плов
+    </button>
+
+    <button type="button" data-target="hot">
+        Горячие блюда
+    </button>
+
+    <button type="button" data-target="salads">
+        Салаты
+    </button>
+
+    <button type="button" data-target="drinks">
+        Напитки
+    </button>
+
+</nav>
+
+
+
+<main>
+
+
+<section id="plov">
+
+    <div class="section-header">
+        <h2>Плов</h2>
+        <span>2 позиции</span>
+    </div>
+
+
+    <article class="dish">
+
+        <div class="photo">
+            <img
+                src="images/plov.jpg"
+                alt="Ханский плов S"
+            >
+        </div>
+
+        <div class="dish-info">
+
+            <div class="dish-top">
+
+                <h3>
+                    Ханский плов S
+                </h3>
+
+                <strong>
+                    1490 ₸
+                </strong>
+
+            </div>
+
+            <p>
+                Ароматный восточный плов
+            </p>
+
+            <span class="weight">
+                400 г
+            </span>
+
+        </div>
+
+    </article>
+
+
+
+    <article class="dish">
+
+        <div class="photo">
+            <img
+                src="images/plov-xl.jpg"
+                alt="Ханский плов XL"
+            >
+        </div>
+
+        <div class="dish-info">
+
+            <div class="dish-top">
+
+                <h3>
+                    Ханский плов XL
+                </h3>
+
+                <strong>
+                    3700 ₸
+                </strong>
+
+            </div>
+
+            <p>
+                Большая порция для компании
+            </p>
+
+            <span class="weight">
+                1000 г
+            </span>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+
+<section id="hot">
+
+    <div class="section-header">
+
+        <h2>
+            Горячие блюда
+        </h2>
+
+    </div>
+
+
+    <article class="simple-dish">
+
+        <div>
+
+            <h3>
+                Новое блюдо
+            </h3>
+
+            <p>
+                Описание блюда
+            </p>
+
+        </div>
+
+        <strong>
+            2500 ₸
+        </strong>
+
+    </article>
+
+</section>
+
+
+
+<section id="salads">
+
+    <div class="section-header">
+
+        <h2>
+            Салаты
+        </h2>
+
+    </div>
+
+
+    <article class="simple-dish">
+
+        <div>
+
+            <h3>
+                Ачичук
+            </h3>
+
+            <p>
+                Свежие овощи
+            </p>
+
+        </div>
+
+        <strong>
+            900 ₸
+        </strong>
+
+    </article>
+
+</section>
+
+
+
+<section id="drinks">
+
+    <div class="section-header">
+
+        <h2>
+            Напитки
+        </h2>
+
+    </div>
+
+
+    <article class="simple-dish">
+
+        <div>
+
+            <h3>
+                Coca-Cola
+            </h3>
+
+            <p>
+                0.5 л
+            </p>
+
+        </div>
+
+        <strong>
+            600 ₸
+        </strong>
+
+    </article>
+
+</section>
+
+
+
+<a
+    class="order-button"
+    href="https://eda.yandex.kz/"
+    target="_blank"
+>
+    Заказать в Яндекс Еде
+    <span>→</span>
+</a>
+
+
+</main>
+
+
+<footer>
+
+    <img
+        src="images/logo.png"
+        alt="QAZ PLOV"
+    >
+
+    <p>
+        © QAZ PLOV
+    </p>
+
+</footer>
+
+<script>
+document.querySelectorAll(".categories button").forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const targetId = button.dataset.target;
+        const target = document.getElementById(targetId);
+
+        if (!target) return;
+
+        const top =
+            target.getBoundingClientRect().top +
+            window.scrollY -
+            80;
+
+        window.scrollTo({
+            top: top,
+            behavior: "smooth"
+        });
+
+        document.querySelectorAll(".categories button")
+            .forEach(btn => btn.classList.remove("active"));
+
+        button.classList.add("active");
+    });
+
+});
+</script>
+
+</body>
+</html>
