@@ -354,3 +354,11 @@ footer p {
     font-size: 11px;
     letter-spacing: 1px;
 }
+.restaurant-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+    border-radius: 50%;
+}
