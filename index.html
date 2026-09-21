@@ -1,297 +1,215 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>QAZ PLOV</title>
-
+    <title>QAZ PLOV — Восточная кухня</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
 <header class="header">
-
     <img
         class="logo"
         src="logo.png"
         alt="QAZ PLOV"
     >
-
+    <h1 class="brand-title">
+        QAZ PLOV
+    </h1>
     <p class="subtitle">
         Восточная кухня
     </p>
-
 </header>
-
 <a
     class="order-button"
     href="https://eda.yandex.ru/restaurant/qaz_plov"
     target="_blank"
+    rel="noopener noreferrer"
 >
     🛵 Заказать в Яндекс Еде
 </a>
-
 <nav class="categories">
-
-    <button class="active" type="button" data-target="plov">
-        Плов
-    </button>
-
-    <button type="button" data-target="hot">
+    <button class="active" type="button" data-target="hot">
         Горячие блюда
     </button>
-
     <button type="button" data-target="salads">
         Салаты
     </button>
-
     <button type="button" data-target="drinks">
         Напитки
     </button>
-
 </nav>
-
-
-
 <main>
-
-
-<section id="plov">
-
+<!-- ГОРЯЧИЕ БЛЮДА -->
+<section id="hot">
     <div class="section-header">
-        <h2>Плов</h2>
-        <span>2 позиции</span>
+        <h2>
+            Горячие блюда
+        </h2>
+        <span>
+            3 позиции
+        </span>
     </div>
-
-
+    <!-- ПЛОВ -->
     <article class="dish">
-
         <div class="photo">
             <img
                 src="plov.jpg"
                 alt="Ханский плов S"
             >
         </div>
-
         <div class="dish-info">
-
             <div class="dish-top">
-
                 <h3>
                     Ханский плов S
                 </h3>
-
                 <strong>
                     1490 ₸
                 </strong>
-
             </div>
-
             <p>
                 Ароматный восточный плов
             </p>
-
             <span class="weight">
                 400 г
             </span>
-
         </div>
-
     </article>
-
-
-
+    <!-- ПЛОВ XL -->
     <article class="dish">
-
         <div class="photo">
             <img
                 src="plov-xl.jpg"
                 alt="Ханский плов XL"
             >
         </div>
-
         <div class="dish-info">
-
             <div class="dish-top">
-
                 <h3>
                     Ханский плов XL
                 </h3>
-
                 <strong>
                     3700 ₸
                 </strong>
-
             </div>
-
             <p>
                 Большая порция для компании
             </p>
-
             <span class="weight">
                 1000 г
             </span>
-
         </div>
-
     </article>
-
-</section>
-
-
-
-<section id="hot">
-
-    <div class="section-header">
-
-        <h2>
-            Горячие блюда
-        </h2>
-
-    </div>
-
-
+    <!-- ДРУГОЕ ГОРЯЧЕЕ БЛЮДО -->
     <article class="simple-dish">
-
         <div>
-
             <h3>
                 Новое блюдо
             </h3>
-
             <p>
                 Описание блюда
             </p>
-
         </div>
-
         <strong>
             2500 ₸
         </strong>
-
     </article>
-
 </section>
-
-
-
+<!-- САЛАТЫ -->
 <section id="salads">
-
     <div class="section-header">
-
         <h2>
             Салаты
         </h2>
-
+        <span>
+            1 позиция
+        </span>
     </div>
-
-
     <article class="simple-dish">
-
         <div>
-
             <h3>
                 Ачичук
             </h3>
-
             <p>
                 Свежие овощи
             </p>
-
         </div>
-
         <strong>
             900 ₸
         </strong>
-
     </article>
-
 </section>
-
-
-
+<!-- НАПИТКИ -->
 <section id="drinks">
-
     <div class="section-header">
-
         <h2>
             Напитки
         </h2>
-
+        <span>
+            1 позиция
+        </span>
     </div>
-
-
     <article class="simple-dish">
-
         <div>
-
             <h3>
                 Coca-Cola
             </h3>
-
             <p>
                 0.5 л
             </p>
-
         </div>
-
         <strong>
             600 ₸
         </strong>
-
     </article>
-
 </section>
-
-
-
 </main>
-
-
-<footer>
-
+<!-- НИЖНЯЯ ИНФОРМАЦИЯ -->
+<footer class="footer">
     <img
         src="logo.png"
         alt="QAZ PLOV"
     >
-
+    <h3>
+        QAZ PLOV
+    </h3>
     <p>
-        © QAZ PLOV
+        Восточная кухня
     </p>
-
+    <div class="contact-info">
+        <a href="tel:+77001234567">
+            📞 +7 (700) 123-45-67
+        </a>
+        <a href="mailto:restaurant@example.com">
+            ✉️ restaurant@example.com
+        </a>
+        <p>
+            📍 Астана, Казахстан
+        </p>
+    </div>
+    <p class="copyright">
+        © QAZ PLOV. Все права защищены.
+    </p>
 </footer>
-
 <script>
 document.querySelectorAll(".categories button").forEach(button => {
-
     button.addEventListener("click", () => {
-
         const targetId = button.dataset.target;
         const target = document.getElementById(targetId);
-
         if (!target) return;
-
         const top =
             target.getBoundingClientRect().top +
             window.scrollY -
             80;
-
         window.scrollTo({
             top: top,
             behavior: "smooth"
         });
-
         document.querySelectorAll(".categories button")
             .forEach(btn => btn.classList.remove("active"));
-
         button.classList.add("active");
     });
-
 });
 </script>
-
 </body>
 </html>
