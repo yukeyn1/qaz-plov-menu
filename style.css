@@ -28,8 +28,15 @@ body {
     margin: 0 auto 4px;
     mix-blend-mode: multiply;
 }
-.subtitle {
+.brand-title {
     margin: 0;
+    color: #681f29;
+    font-size: 21px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+.subtitle {
+    margin: 5px 0 0;
     color: #8a817a;
     font-size: 11px;
     font-weight: 700;
@@ -277,23 +284,65 @@ section {
 /* =========================
    FOOTER
 ========================= */
-footer {
-    padding: 34px 20px 42px;
+.footer {
+    padding: 38px 20px 42px;
     text-align: center;
     background: #211b19;
 }
-footer img {
+.footer img {
     width: 105px;
     max-height: 65px;
     object-fit: contain;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
     mix-blend-mode: screen;
 }
-footer p {
+.footer h3 {
+    margin: 0 0 5px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: .5px;
+}
+.footer > p {
     margin: 0;
-    color: #9d958e;
-    font-size: 11px;
-    letter-spacing: 1px;
+    color: #b7aea6;
+    font-size: 12px;
+}
+/* =========================
+   CONTACT INFO
+========================= */
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 9px;
+    margin: 22px 0;
+}
+.contact-info a {
+    color: #f1ebe5;
+    text-decoration: none;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: .1px;
+    transition: color .2s ease;
+}
+.contact-info a:hover {
+    color: #ffffff;
+}
+.contact-info p {
+    margin: 0;
+    color: #aaa19a;
+    font-family: 'Manrope', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+.copyright {
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, .08);
+    color: #817871 !important;
+    font-size: 10px !important;
+    letter-spacing: .5px;
 }
 /* =========================
    MOBILE
@@ -305,6 +354,9 @@ footer p {
     .logo {
         width: 195px;
         height: 115px;
+    }
+    .brand-title {
+        font-size: 19px;
     }
     .order-button {
         font-size: 14px;
@@ -321,6 +373,9 @@ footer p {
     }
     .photo {
         aspect-ratio: 1 / .82;
+    }
+    .contact-info a {
+        font-size: 13px;
     }
 }
 /* =========================
