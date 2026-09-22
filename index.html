@@ -1,314 +1,226 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>QAZ PLOV — Восточная кухня</title>
+
+    <meta
+        name="description"
+        content="QAZ PLOV — восточная кухня в Астане. Плов, салаты и напитки."
+    >
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-<header class="header">
-    <img
-        class="logo"
-        src="logo.png"
-        alt="QAZ PLOV"
-    >
-    <h1 class="brand-title">
-        QAZ PLOV
-    </h1>
-    <p class="subtitle">
-        Восточная кухня
-    </p>
-</header>
-<a
-    class="order-button"
-    href="https://eda.yandex.ru/restaurant/qaz_plov"
-    target="_blank"
-    rel="noopener noreferrer"
->
-    🛵 Заказать в Яндекс Еде
-</a>
-<nav class="categories">
-    <button class="active" type="button" data-target="hot">
-        Горячие блюда
-    </button>
-    <button type="button" data-target="salads">
-        Салаты
-    </button>
-    <button type="button" data-target="drinks">
-        Напитки
-    </button>
-</nav>
-<main>
-<!-- =========================
-     ГОРЯЧИЕ БЛЮДА
-========================= -->
-<section id="hot">
-    <div class="section-header">
+
+<main class="home">
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <img
+                class="hero-logo"
+                src="logo.png"
+                alt="QAZ PLOV"
+            >
+
+            <p class="hero-label">
+                ВОСТОЧНАЯ КУХНЯ
+            </p>
+
+            <h1>
+                QAZ PLOV
+            </h1>
+
+            <p class="hero-description">
+                Ароматный плов и блюда восточной кухни
+            </p>
+
+
+            <a
+                class="main-button"
+                href="menu.html"
+            >
+                🍽️ Открыть меню
+            </a>
+
+
+            <a
+                class="secondary-button"
+                href="https://eda.yandex.ru/restaurant/qaz_plov"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                🛵 Заказать доставку
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         QUICK LINKS
+    ========================== -->
+
+    <section class="links-section">
+
         <h2>
-            Горячие блюда
+            Мы на связи
         </h2>
-        <span>
-            2 позиции
-        </span>
-    </div>
-    <!-- ХАНСКИЙ ПЛОВ S -->
-    <article class="dish">
-        <div class="photo">
-            <img
-                src="plov.jpg"
-                alt="Ханский плов S"
+
+        <p class="links-subtitle">
+            Выберите удобный способ связи
+        </p>
+
+
+        <div class="links-grid">
+
+            <a
+                class="info-card"
+                href="#"
             >
-        </div>
-        <div class="dish-info">
-            <div class="dish-top">
-                <h3>
-                    Ханский плов S
-                </h3>
-                <strong>
-                    1490 ₸
-                </strong>
-            </div>
-            <p>
-                Ароматный восточный плов
-            </p>
-            <span class="weight">
-                400 г
-            </span>
-        </div>
-    </article>
-    <!-- ХАНСКИЙ ПЛОВ XL -->
-    <article class="dish">
-        <div class="photo">
-            <img
-                src="plov-xl.jpg"
-                alt="Ханский плов XL"
+                <span class="info-icon">📍</span>
+
+                <span>
+                    <strong>2GIS</strong>
+                    <small>Мы на карте</small>
+                </span>
+
+                <b>›</b>
+            </a>
+
+
+            <a
+                class="info-card"
+                href="#"
             >
+                <span class="info-icon">📸</span>
+
+                <span>
+                    <strong>Instagram</strong>
+                    <small>Наш Instagram</small>
+                </span>
+
+                <b>›</b>
+            </a>
+
+
+            <a
+                class="info-card"
+                href="tel:+77001234567"
+            >
+                <span class="info-icon">📞</span>
+
+                <span>
+                    <strong>Позвонить</strong>
+                    <small>+7 (700) 123-45-67</small>
+                </span>
+
+                <b>›</b>
+            </a>
+
+
+            <a
+                class="info-card"
+                href="mailto:restaurant@example.com"
+            >
+                <span class="info-icon">✉️</span>
+
+                <span>
+                    <strong>Написать нам</strong>
+                    <small>restaurant@example.com</small>
+                </span>
+
+                <b>›</b>
+            </a>
+
         </div>
-        <div class="dish-info">
-            <div class="dish-top">
-                <h3>
-                    Ханский плов XL
-                </h3>
-                <strong>
-                    3700 ₸
-                </strong>
-            </div>
-            <p>
-                Большая порция для компании
-            </p>
-            <span class="weight">
-                1000 г
-            </span>
-        </div>
-    </article>
-</section>
-<!-- =========================
-     САЛАТЫ
-========================= -->
-<section id="salads">
-    <div class="section-header">
+
+    </section>
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+
+    <section class="about-section">
+
+        <p class="section-label">
+            QAZ PLOV
+        </p>
+
         <h2>
-            Салаты
+            Вкус востока<br>
+            в каждом блюде
         </h2>
-        <span>
-            3 позиции
-        </span>
-    </div>
-    <!-- АЧИЧУК -->
-    <article class="dish">
-        <div class="photo">
-            <img
-                src="achichuk.jpg"
-                alt="Ачичук"
-            >
+
+        <p>
+            Готовим ароматный плов и блюда восточной кухни,
+            чтобы каждый визит оставлял приятное послевкусие.
+        </p>
+
+        <div class="about-location">
+            📍 Астана, Казахстан
         </div>
-        <div class="dish-info">
-            <div class="dish-top">
-                <h3>
-                    Ачичук
-                </h3>
-                <strong>
-                    1450 ₸
-                </strong>
-            </div>
-            <p>
-                Свежие овощи
-            </p>
-            <span class="weight">
-                350 г
-            </span>
-        </div>
-    </article>
-    <!-- ЦЕЗАРЬ -->
-    <article class="dish">
-        <div class="photo">
-            <img
-                src="cezar .jpg"
-                alt="Цезарь"
-            >
-        </div>
-        <div class="dish-info">
-            <div class="dish-top">
-                <h3>
-                    Цезарь
-                </h3>
-                <strong>
-                    2690 ₸
-                </strong>
-            </div>
-            <p>
-                Салат Цезарь
-            </p>
-            <span class="weight">
-                400 г
-            </span>
-        </div>
-    </article>
-    <!-- ХРУСТЯЩИЙ БАКЛАЖАН -->
-    <article class="dish">
-        <div class="photo">
-            <img
-                src="hrustyashchiy-baklazhan.jpg"
-                alt="Хрустящий баклажан"
-            >
-        </div>
-        <div class="dish-info">
-            <div class="dish-top">
-                <h3>
-                    Хрустящий баклажан
-                </h3>
-                <strong>
-                    2490 ₸
-                </strong>
-            </div>
-            <p>
-                Хрустящий баклажан
-            </p>
-            <span class="weight">
-                400 г
-            </span>
-        </div>
-    </article>
-</section>
-<!-- =========================
-     НАПИТКИ
-========================= -->
-<section id="drinks">
-    <div class="section-header">
-        <h2>
-            Напитки
-        </h2>
-        <span>
-            4 позиции
-        </span>
-    </div>
-    <!-- COCA-COLA 0.5 -->
-    <article class="simple-dish">
-        <div>
-            <h3>
-                Coca-Cola
-            </h3>
-            <p>
-                0,5 л
-            </p>
-        </div>
-        <strong>
-            550 ₸
-        </strong>
-    </article>
-    <!-- COCA-COLA 1 Л -->
-    <article class="simple-dish">
-        <div>
-            <h3>
-                Coca-Cola
-            </h3>
-            <p>
-                1 л
-            </p>
-        </div>
-        <strong>
-            750 ₸
-        </strong>
-    </article>
-    <!-- FANTA 0.5 -->
-    <article class="simple-dish">
-        <div>
-            <h3>
-                Fanta
-            </h3>
-            <p>
-                0,5 л
-            </p>
-        </div>
-        <strong>
-            550 ₸
-        </strong>
-    </article>
-    <!-- FANTA 1 Л -->
-    <article class="simple-dish">
-        <div>
-            <h3>
-                Fanta
-            </h3>
-            <p>
-                1 л
-            </p>
-        </div>
-        <strong>
-            750 ₸
-        </strong>
-    </article>
-</section>
+
+    </section>
+
+
 </main>
+
+
 <!-- =========================
      FOOTER
-========================= -->
-<footer class="footer">
+========================== -->
+
+<footer class="home-footer">
+
     <img
         src="logo.png"
         alt="QAZ PLOV"
     >
+
     <h3>
         QAZ PLOV
     </h3>
+
     <p>
         Восточная кухня
     </p>
-    <div class="contact-info">
-        <a href="tel:+77001234567">
-            📞 +7 (700) 123-45-67
+
+    <div class="footer-links">
+
+        <a href="menu.html">
+            Меню
         </a>
-        <a href="mailto:restaurant@example.com">
-            ✉️ restaurant@example.com
+
+        <span>•</span>
+
+        <a href="https://eda.yandex.ru/restaurant/qaz_plov"
+           target="_blank"
+           rel="noopener noreferrer">
+            Яндекс Еда
         </a>
-        <p>
-            📍 Астана, Казахстан
-        </p>
+
     </div>
+
     <p class="copyright">
-        © QAZ PLOV. Все права защищены.
+        © 2026 QAZ PLOV
     </p>
+
 </footer>
-<script>
-document.querySelectorAll(".categories button").forEach(button => {
-    button.addEventListener("click", () => {
-        const targetId = button.dataset.target;
-        const target = document.getElementById(targetId);
-        if (!target) return;
-        const top =
-            target.getBoundingClientRect().top +
-            window.scrollY -
-            80;
-        window.scrollTo({
-            top: top,
-            behavior: "smooth"
-        });
-        document.querySelectorAll(".categories button")
-            .forEach(btn => btn.classList.remove("active"));
-        button.classList.add("active");
-    });
-});
-</script>
+
 </body>
 </html>
